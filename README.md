@@ -21,10 +21,15 @@ Or as Icon for Swing buttons
 
 ```java
     import javax.swing.JButton;
+    import java.awt.Color;
 
     import nl.robbertnoordzij.JFontAwesome.FA;
     import nl.robbertnoordzij.JFontAwesome.FAIcon;
 
-    Icon icon = new FAIcon(FA.ACHOR);
+    FAIcon icon = new FAIcon(FA.ACHOR);
+    
+    // Change the color of the icon
+    icon.setColor(Color.BLUE);
+    
     JButton button = new JButton("Button with an icon", icon);
 ```
