@@ -617,6 +617,10 @@ public enum FA {
 		return icon;
 	}
 	
+	/**
+	 * Will load the font from the filesystem
+	 * @return FontAwesome ttf font
+	 */
 	private static Font getFont() {
 		try  {
 			InputStream inputStream = FA.class.getResourceAsStream("./fontawesome-webfont.ttf");
