@@ -10,13 +10,13 @@ import javax.swing.Icon;
 
 public class FAIcon implements Icon {
 
-	private String icon;
+	private FA icon;
 	
 	private Font font = FA.TTF.deriveFont(14f);
 	
 	private FontMetrics fontMetrics;
 
-	public FAIcon(String icon) {
+	public FAIcon(FA icon) {
 		this.icon = icon;
 	}
 
@@ -25,14 +25,14 @@ public class FAIcon implements Icon {
 		Font reset = g.getFont();
 		
 		g.setFont(font);
-		g.drawString(icon, x, y + getFontMetrics().getHeight());
+		g.drawString(icon.toString(), x, y + getFontMetrics().getHeight());
 		
 		g.setFont(reset);
 	}
 
 	@Override
 	public int getIconWidth() {
-		return getFontMetrics().stringWidth(icon);
+		return getFontMetrics().stringWidth(icon.toString());
 	}
 
 	@Override
@@ -52,5 +52,4 @@ public class FAIcon implements Icon {
 		
 		return fontMetrics;
 	}
-
 }
